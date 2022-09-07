@@ -1,0 +1,11 @@
+Book's indicator:
+blue - concepts and techniques
+green - advice
+red - warning
+
+Each section and each chapter assume understanding of what came before.
+Each chapter is a reasonably self-contained unit, meant to be read in “one sitting”.
+Other criteria include that a chapter is a suitable unit for drills and exercises and
+that each chapter presents some specific concept, idea, or technique. 
+This plurality of criteria has left a few chapters uncomfortably long, 
+so please don’t take “in one sitting” too literally.

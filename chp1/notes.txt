@@ -1,0 +1,12 @@
+We are obviously in awe of the range of software that permeates our techno-
+logical civilization. Not all applications of software do good, of course, but that is
+another story. Here we wanted to emphasize how pervasive software is and how
+much of what we rely on in our daily lives depends on software. It was all written
+by people like us. All the scientists, mathematicians, engineers, programmers, etc.
+who built the software briefly mentioned here started like you are starting.
+
+If you start wondering if it is worth all your hard work
+(most thoughtful people wonder about that sometime), come back and reread this
+chapter, the Preface, and bits of Chapter 0 (“Notes to the Reader”). If you start
+wondering if you can handle it all, remember that millions have succeeded in be-
+coming competent programmers, designers, software engineers, etc. You can, too.

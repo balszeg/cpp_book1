@@ -1,0 +1,9 @@
+Put a semicolon after every expression that doesn’t end with a right curly brace ( } ).
+
+You might think you understand everything you read and everything your
+Mentor or instructor told you, but repetition and practice are necessary to de-
+velop programming skills. In this regard, programming is like athletics, music,
+dance, or any skill-based craft. Imagine people trying to compete in any of those
+fields without regular practice. You know how well they would perform. Constant
+practice — for professionals that means lifelong constant practice — is the only way
+to develop and maintain a high-level practical skill.
