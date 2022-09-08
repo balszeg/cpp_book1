@@ -1,0 +1,54 @@
+The reason for the name double is historical: double is short for “double-
+precision floating point.” Floating point is the computer’s approximation to the
+mathematical concept of a real number.
+
+The term floating point refers to the fact that a number's radix point (decimal point, or, more commonly in computers, binary point) can "float";
+that is, it can be placed anywhere relative to the significant digits of the number. 
+This position is indicated by the exponent, and thus the floating-point representation can be thought of as a form of scientific notation.
+
+	       (base)
+		  |
+		  V
+1.2345 = 12345 * 10^-4 <-(exponent)
+	   A
+     	   | 
+     (significand)
+
+That’s a very common technique: when we need to solve a problem, we look
+for a similar problem and use our solution for that with suitable modification.
+Don’t start from scratch unless you really have to. Using a previous version of a
+program as a base for modification often saves a lot of time, and we benefit from
+much of the effort that went into the original program.
+
+A type defines a set of possible values and a set of operations (for an object).
+An object is some memory that holds a value of a given type.
+A value is a set of bits in memory interpreted according to a type.
+A variable is a named object.
+A declaration is a statement that gives a name to an object.
+A definition is a declaration that sets aside memory for an object.
+
+These conversions are safe:
+bool to char
+bool to int
+bool to double
+char to int
+char to double
+int to double
+
+They are unsafe, even though they are accepted by the compiler:
+double to int
+double to char
+double to bool
+int to char
+int to bool
+char to bool
+
+C++11 introduced an initialization notation that outlaws narrowing conversions. 
+double x {2.7}; 	// OK
+int y {x}; 		// error: double -> int might narrow
+int a {1000}; 		// OK
+char b {a}; 		// error: int -> char might narrow
+int char b1 {1000}; 	// error: narrowing (assuming 8-bit chars)
+char b2 {48}; 		// OK
+The {} -list-based notation is known as universal and uniform initialization.
+

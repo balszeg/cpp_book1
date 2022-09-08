@@ -1,0 +1,13 @@
+Our main tool for organizing a program — and for organizing our thoughts
+as we program — is to break up a big computation into many little ones. This
+technique comes in two variations:
+Abstraction: Hide details that we don’t need to use a facility (“implementation details”) behind a convenient and general interface.
+“Divide and conquer”: Here we take a large problem and divide it into several little ones.
+
+literal:
+int length = 20; // a literal integer (used to initialize a variable)
+
+A constexpr symbolic constant must be given a value that is known at compile time. (constant expression)
+To handle cases where the value of a “variable” that is initialized with a value that 
+is not known at compile time but never changes after initialization, C++ offers a
+second form of constant (const). 
