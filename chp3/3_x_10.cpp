@@ -18,8 +18,7 @@ int main() {
 	if (operation == "/") {
 		std::cout << "Resolution: " << operand1 / operand2 << std::endl;
 	}
-	//TODO: else agba mindig belepunk
-	else {
+	if (operation != "+" && operation != "-" && operation != "*" && operation != "/") {
 		std::cout << "Unknown operation sign!" << std::endl;
 	}
 

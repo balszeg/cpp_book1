@@ -11,3 +11,25 @@ A constexpr symbolic constant must be given a value that is known at compile tim
 To handle cases where the value of a “variable” that is initialized with a value that 
 is not known at compile time but never changes after initialization, C++ offers a
 second form of constant (const). 
+
+switch statement technicalities:
+1. The value on which we switch must be of an integer, char , or enumeration type. In particular, you cannot switch on a string.
+2. The values in the case labels must be constant expressions. In particular, you cannot use a variable in a case label.
+3. You cannot use the same value for two case labels.
+4. You can use several case labels for a single case.
+5. Don’t forget to end each case with a break. Unfortunately, the compiler probably won’t warn you if you forget. (fall through/drop through)
+
+A for-statement is always equivalent to some while-statement.
+
+Using a for-statement yields more easily understood and more maintainable code whenever a loop can be defined as a 
+for-statement with a simple initializer, condition, and increment operation. 
+Use a while-statement only when that’s not the case.
+
+Never modify the loop variable inside the body of a for-statement:
+int main()
+{
+	for (int i = 0; i<100; ++i) {
+	cout << i << '\t' << square(i) << '\n';
+	++i; // ERROR
+	}
+}

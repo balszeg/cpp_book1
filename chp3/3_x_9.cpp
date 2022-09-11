@@ -34,8 +34,7 @@ int main() {
 	if (word == "four") {
 		std::cout << "Your number is: 4 " << std::endl;
 	}
-	//TODO: else ag mindig meghivodik
-	else {
+	if (word != "0" && word != "zero" && word != "1" && word != "one" && word != "2" && word != "3" && word != "three" && word != "4" && word != "four"){
 		std::cout << "Not a number I know" << std::endl;
 	}
 
