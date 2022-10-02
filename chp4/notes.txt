@@ -33,3 +33,16 @@ int main()
 	++i; // ERROR
 	}
 }
+
+Extra finding during exercise solving:
+If you use this input reading:
+vector<string> words;
+for(string temp; cin>>temp;)
+	words.push_back(temp);
+
+Add extra line for breaking out of the while loop:
+	if(temp=="stop")
+	   break;
+
+Without it, some exercise code produced unambiguous output results.
+See: 4_x_16,4_x_17,4_x_19,4_x_20,4_x_21
