@@ -12,6 +12,31 @@ To handle cases where the value of a “variable” that is initialized with a v
 is not known at compile time but never changes after initialization, C++ offers a
 second form of constant (const). 
 
+Contrary to popular belief, modern compilers tend to generate exactly
+the same code from a=a+1 as for ++a when "a" is one of the built-in types.
+
+The notations type(value) and type{value} mean “convert value to type as if you
+were initializing a variable of type type with the value value.” In other words, if
+necessary, the compiler converts (“promotes”) int operands to doubles or char
+operands to ints. The type{value} notation prevents narrowing, but the
+type(value) notation does not.
+
+It may look as if we used an “else-if-statement,” but there is no such
+thing in C++. Instead, we combined two if-statements. The general form of an
+if-statement is:
+	if ( expression ) statement else statement
+That is, an if, followed by an expression in parentheses, followed by a statement, fol-
+lowed by an else, followed by a statement. What we did was to use an if-statement as
+the else part of an if-statement:
+	if ( expression ) statement else if ( expression ) statement else statement
+For our program that gives this structure:
+if (unit == 'i') // 1st alternative
+...
+else if (unit == 'c') // 2nd alternative
+...
+else // 3rd alternative
+...
+
 switch statement technicalities:
 1. The value on which we switch must be of an integer, char , or enumeration type. In particular, you cannot switch on a string.
 2. The values in the case labels must be constant expressions. In particular, you cannot use a variable in a case label.

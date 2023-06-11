@@ -1,0 +1,28 @@
+Great ideas which are new to me:
+
+The idea of Token usage:
+6.3.2; 6.3.3; 6.3.4.
+
+The idea of Grammar usage:
+Completely 6.4 and 6.5
+
+Making the distinction between the (public) interface meant for users and the (pri-
+vate) implementation details used only by the implementer is a powerful tool for
+structuring code. The public interface should contain (only) what a user needs,
+which is typically a set of functions. The private implementation contains what is
+necessary to implement those public functions, typically data and functions dealing
+with messy details that the users need not know about and shouldn’t directly use.
+
+When we define a member of a class outside the class definition itself, we
+have to mention which class we mean the member to be a member of. We use
+the notation
+
+class_name :: member_name
+
+for that. Why would we define a member outside its class? The main answer is clar-
+ity: the class definition (primarily) states what the class can do. Member function
+definitions are implementations that specify how things are done. We prefer to
+put them “elsewhere” where they don’t distract. Our ideal is to have every logical
+entity in a program fit on a screen. Class definitions typically do that if the mem-
+ber function definitions are placed elsewhere, but not if they are placed within the
+class definition (“in-class”).

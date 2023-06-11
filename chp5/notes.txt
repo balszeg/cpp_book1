@@ -1,0 +1,39 @@
+Error classification:
+-Compile-time errors: Errors found by the compiler. We can further clas-
+sify compile-time errors based on which language rules they violate, for
+example: syntax errors, type errors
+
+-Link-time errors: Errors found by the linker when it is trying to combine
+object fi les into an executable program.
+
+-Run-time errors: Errors found by checks in a running program. We can
+further classify run-time errors as: errors detected by the computer, errors detected by a library, errors detected by user code
+
+-Logic errors: Errors found by the programmer looking for the causes of
+erroneous results.
+
+Basically, we offer three approaches to producing acceptable software:
+-Organize software to minimize errors.
+-Eliminate most of the errors we made through debugging and testing.
+-Make sure the remaining errors are not serious.
+
+Check your arguments in a function unless you have a good reason not to.
+
+In case of vector range for-loop, this has range-error:
+for (int i=0; i<=v.size(); ++i)
+The vector last elemnt should not be included in, because of the indenxing:
+in case of 5 element vector, it means the indenxing will go until 5 (included), instead of 4.
+Correct:
+for (int i=0; i<v.size(); ++i)
+
+This is valid check if cin has failed:
+if (!std::cin)
+
+cerr is exactly like cout except that it is meant for error output.
+By default both cerr and cout write to the screen, but cerr isn’t optimized so it is more resilient to errors, and
+on some operating systems it can be diverted to a different target, such as a file.
+Using cerr also has the simple effect of documenting that what we write relates to errors.
+
+Dealing with exceptions of both type out_of_range and type runtime_error
+through a single type exception, said to be a common base (supertype) of both,
+is a most useful and general technique.
