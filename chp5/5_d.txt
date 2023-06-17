@@ -1,0 +1,25 @@
+1. Cout << " Success!\n "; - cout << " Success!\n ";
+2. cout << " Success!\n; - cout << " Success!\n ";
+3. cout << " Success " << !\n " - cout << " Success!\n ";
+4. cout << success << '\n'; - cout << " Success!\n ";
+5. string res = 7; vector<int> v(10); v[5] = res; cout << " Success!\n " ; - cannot assign integer literal to string variable, string variabla cannot be assigned to an integer vector
+6. vector<int> v(10); v(5) = 7; if (v(5)!=7) cout << " Success!\n " ; - v[5] is the correct way to refer the vector 5. element
+7. if (cond) cout << " Success!\n " ; else cout << " Fail!\n " ; - cound is not defined anywhere
+8. bool c = false; if (c) cout << " Success!\n " ; else cout << " Fail!\n " ; - it will always fail and never succed
+9. string s = " ape " ; boo c = " fool " <s; if (c) cout << " Success!\n " ; - boo is not a datatype, more like bool, if it is a boolean variable, then it cannot get a string, also c < s comparison never will give true as answer, looking as a string compare it is never true
+10. string s = " ape " ; if (s== " fool " ) cout << " Success!\n " ; - the true condition is never true
+11. string s = " ape " ; if (s== " fool " ) cout < " Success!\n " ; - the true condition is never true, the double arrow operator misses an arrow after cout
+12. string s = " ape " ; if (s+ " fool " ) cout < " Success!\n " ; - the true condition is never true, the double arrow operator misses an arrow after cout, string addition do not makes a true boolean condition
+13. vector<char> v(5); for (int i=0; 0<v.size(); ++i) ; cout << " Success!\n " ; - the for loop condition is wrong - 0 < v.size()
+14. vector<char> v(5); for (int i=0; i<=v.size(); ++i) ; cout << " Success!\n " ; - the for loop condition is wrong - i <= v.size() - the iterator goes over the vector size
+15. string s = " Success!\n " ; for (int i=0; i<6; ++i) cout << s[i]; - the for loop condition is wrong - i<6 - 6 is not enough for the whole message to print out
+16. if (true) then cout << " Success!\n " ; else cout << " Fail!\n " ; - it is always true, it is not necessary to have an else branch, then is not needed
+17. int x = 2000; char c = x; if (c==2000) cout << " Success!\n " ; - x is too large for character conversion, c will never be equal to 2000
+18. string s = " Success!\n " ; for (int i=0; i<10; ++i) cout << s[i]; - the line delminiter missing between for(...) and cout
+19. vector v(5); for (int i=0; i<=v.size(); ++i) ; cout << " Success!\n " ; - why the vector is needed here? , vector datatype is not given, i<=v.size() is over the range of the vector, even if v is initialized as empty vector with 5 element, the for-loop will always print Success!
+20. int i=0; int j = 9; while (i<10) ++j; if (j<i) cout << " Success!\n " ; - it is an infinite loop, i is never incremented, j is never smaller then i
+21. int x = 2; double d = 5/(x – 2); if (d==2*x+0.5) cout << " Success!\n " ; - calculating d is done by dividing with zero, the condition of if is never true
+22. string<char> s = " Success!\n " ; for (int i=0; i<=10; ++i) cout << s[i]; - string declaration is wrong <char> is not necessary, line delimeter is missing after for(...)
+23. int i=0; while (i<10) ++j; if (j<i) cout << " Success!\n " ; - i is never incremented, infinite loop, j is never defined
+24. int x = 4; double d = 5/(x – 2); if (d=2*x+0.5) cout << " Success!\n " ; - if statement is not a condition checking, it is an assigning, also it is never true
+25. cin << " Success!\n " ; - it is an input from the console, not an output to it

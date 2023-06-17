@@ -12,6 +12,10 @@ further classify run-time errors as: errors detected by the computer, errors det
 -Logic errors: Errors found by the programmer looking for the causes of
 erroneous results.
 
+There are two approach for function argument checking: the “caller must check the arguments” approach to the “function must check its own arguments”
+approach (also called “the callee checks” because a called function is often called “a
+callee”).
+
 Basically, we offer three approaches to producing acceptable software:
 -Organize software to minimize errors.
 -Eliminate most of the errors we made through debugging and testing.
@@ -34,6 +38,29 @@ By default both cerr and cout write to the screen, but cerr isn’t optimized so
 on some operating systems it can be diverted to a different target, such as a file.
 Using cerr also has the simple effect of documenting that what we write relates to errors.
 
+We added catch(...) to handle exceptions of any type whatsoever.
 Dealing with exceptions of both type out_of_range and type runtime_error
 through a single type exception, said to be a common base (supertype) of both,
 is a most useful and general technique.
+
+Given exceptions (and templates; see §19.3) we can write a function
+that tests and throws a runtime_error exception if an assignment or initialization
+would lead to a changed value. For example:
+int x1 = narrow_cast<int>(2.9); // throws
+int x2 = narrow_cast<int>(2.0); // OK
+char c1 = narrow_cast<char>(1066); // throws
+char c2 = narrow_cast<char>(85); // OK
+
+The < . . . > brackets are the same as are used for vector<int>. They are used
+when we need to specify a type, rather than a value, to express an idea. They are
+called template arguments. We can use narrow_cast when we need to convert a value
+and we are not sure “if it will fit”; it is defined in std_lib_facilities.h (this header is downloadable from the book's site) and imple-
+mented using error(). The word cast means “type conversion” and indicates the
+operation’s role in dealing with something that’s broken (like a cast on a broken
+leg). Note that a cast doesn’t change its operand; it produces a new value (of the
+type specified in the < . . . >) that corresponds to its operand value.
+
+5.9.1 Practical debug advice -> consist a reasanoble list for commenting and programming
+
+A requirement of a function upon its argument is often called a pre-condition: 
+it must be true for the function to perform its actioncorrectly.
