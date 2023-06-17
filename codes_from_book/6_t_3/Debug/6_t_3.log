@@ -1,4 +1,0 @@
-﻿  6_t_3.cpp
-D:\Programming\cpp_programs\cpp_book1\codes_from_book\6_t_3\6_t_3.cpp(121): warning C4715: 'primary': not all control paths return a value
-D:\Programming\cpp_programs\cpp_book1\codes_from_book\6_t_3\6_t_3.cpp(89): warning C4715: 'Token_stream::get': not all control paths return a value
-  6_t_3.vcxproj -> D:\Programming\cpp_programs\cpp_book1\codes_from_book\6_t_3\Debug\6_t_3.exe
