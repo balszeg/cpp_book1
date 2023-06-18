@@ -1,0 +1,6 @@
+Do not use the built-in terminal, instead use your OS terminal on Ubuntu.
+
+Edit -> Preferences -> Build & Run -> Default in "Run in terminal" -> Enabled
+
+For CopyDown command use Ctrl+Alt+Down(at the numpad when numlock is off).
+You can change it under: Edit -> Preference -> Environment -> Keyboard -> TextEditor
