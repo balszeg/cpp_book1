@@ -13,6 +13,14 @@ which is typically a set of functions. The private implementation contains what 
 necessary to implement those public functions, typically data and functions dealing
 with messy details that the users need not know about and shouldn’t directly use.
 
+class Token_stream {
+	public: 
+	// user interface
+	private:
+	// implementation details
+	// (not directly accessible to users of Token_stream)
+};
+
 When we define a member of a class outside the class definition itself, we
 have to mention which class we mean the member to be a member of. We use
 the notation
